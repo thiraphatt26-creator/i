@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Injanda Trading — Spare Parts & Services for Printing and Packaging</title>
+<meta name="description" content="Spare parts and services for the printing and packaging industry — web up kites, rollers, blades, stitcher parts, electrical repair and precision manufacturing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%230f1b2d'/%3E%3Cpath d='M19 8h10v15.2L19 29.5z' fill='%23fff'/%3E%3Cpath d='M19 33.3l10-6.3V40H19z' fill='%23e8541e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.8/dist/umd/supabase.min.js';document.head.appendChild(s)"></script>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span id="announce"></span>
+  <span class="tb-r" id="tbContact"></span>
+</div></div>
+
+<header class="head"><div class="wrap head-in">
+  <a href="#/" class="logo" aria-label="Home"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#0f1b2d"/><path d="M19 8h10v15.2L19 29.5z" fill="#fff"/><path d="M19 33.3l10-6.3V40H19z" fill="#e8541e"/></svg><span><b id="storeName">Injanda</b><small id="logoSub">Trading & Consult</small></span></a>
+  <form class="search" id="searchForm" autocomplete="off">
+    <select id="sCat" aria-label="Category"></select>
+    <input id="q" placeholder="Search by part name, machine brand or SKU" aria-label="Search products">
+    <button aria-label="Search"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Search</span></button>
+    <div class="suggest" id="suggest"></div>
+  </form>
+  <div class="actions">
+    <a class="act" id="acctBtn" href="#/login"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span id="acctLabel">Log in</span></a>
+    <button class="act" id="wishBtn" aria-label="Wishlist"><svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><em id="wishN" data-n="0">0</em></button>
+    <button class="act cart" id="cartBtn" aria-label="Cart"><svg class="i" viewBox="0 0 24 24"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9.5" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg><span>Cart</span><em id="cartN" data-n="0">0</em></button>
+  </div>
+</div>
+<nav class="cnav"><div class="wrap" id="cnav"></div></nav>
+</header>
+
+<main id="app"><div class="boot"><div class="spin"></div><p>Connecting to the store…</p></div></main>
+
+<footer id="footer"><div class="wrap">
+  <div class="fcols">
+    <div><b class="flogo"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#0f1b2d"/><path d="M19 8h10v15.2L19 29.5z" fill="#fff"/><path d="M19 33.3l10-6.3V40H19z" fill="#e8541e"/></svg><span id="fName">Injanda Trading & Consult</span></b><p id="fTag"></p><p class="fct" id="fContact"></p></div>
+    <div><b>Products</b><div id="fCats"></div></div>
+    <div><b>Company</b><a href="#/shop">All products</a><a href="#/account">My account</a><a href="#/quote">Request a quote</a></div>
+    <div><b>Quality</b><p>DIN ISO 9001 certified manufacturing. Free estimates, 6-month warranty on repairs.</p></div>
+  </div>
+  <p class="copy">© 2026 Injanda Trading & Consult. All rights reserved.<span id="adminDot">·</span></p>
+</div></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="drawer-h"><h3>Your cart</h3><button class="x" data-close aria-label="Close">✕</button></div>
+  <div class="drawer-b" id="cartList"></div>
+  <div class="drawer-f" id="cartFoot"></div>
+</aside>
+<div class="modal" id="modal"><div class="modal-box" id="modalBox"></div></div>
+<div class="toasts" id="toasts"></div>
+
+<div class="admin" id="admin" hidden></div>
+<div class="adlg" id="adlg"><div class="adlg-box" id="adlgBox"></div></div>
+
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
